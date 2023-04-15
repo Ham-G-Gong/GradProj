@@ -7,8 +7,8 @@ export const App = () => {
     <div className="App">
       <Router>
         <Routes>
-          <Route path={""} element={<Home />}></Route>
-          <Route path={"hardware"} element={<Hardware />}></Route>
+          <Route path={"/"} element={<Home />}></Route>
+          <Route path={"/hardware"} element={<Hardware />}></Route>
         </Routes>
       </Router>
     </div>
