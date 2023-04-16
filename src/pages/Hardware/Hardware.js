@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Header } from "../../components/organisms/Header";
 
 export const Hardware = () => {
   return (
     <div className="home">
-      홈 아닙니다
-      <Link to="..">홈으로이동</Link>
+      <Header />
+      <div>하두에어</div>
     </div>
   );
 };
