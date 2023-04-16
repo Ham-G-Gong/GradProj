@@ -1,10 +1,11 @@
 import { Header } from "../../components/components/Header";
+import { MainPage } from "../../components/dataAddedComps/MainPage";
 
 export const Hardware = () => {
   return (
     <div className="home">
       <Header />
-      <div>하두에어</div>
+      <MainPage where="Hardware" />
     </div>
   );
 };
