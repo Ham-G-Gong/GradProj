@@ -1,10 +1,6 @@
 import { ConnectFailed } from "./ConnectFailed";
 
-export const PageRouterFrame = ({
-  connect_state,
-  device_info,
-  ConnectSuccessComponent,
-}) => {
+export const PageRouterFrame = ({ connect_state, ConnectSuccessComponent }) => {
   if (connect_state) {
     console.log("Device is connected.");
     return (

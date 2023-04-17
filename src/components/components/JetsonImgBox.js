@@ -1,19 +1,13 @@
-export const JetsonImgBox = () => {
+export const JetsonImgBox = ({ before_process, after_process }) => {
   return (
     <div>
       <div>
         <a>영상 처리 전</a>
-        <img
-          alt="before processing."
-          src="https://t1.daumcdn.net/cfile/tistory/99BB433359E8C2BF32"
-        />
+        <img alt="before processing." src={before_process} />
       </div>
       <div>
         <a>영상 처리 후</a>
-        <img
-          alt="after processing."
-          src="https://t1.daumcdn.net/cfile/tistory/99D3583359E8C8511E"
-        />
+        <img alt="after processing." src={after_process} />
       </div>
     </div>
   );

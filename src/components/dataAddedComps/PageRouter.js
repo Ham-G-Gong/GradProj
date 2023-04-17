@@ -1,9 +1,8 @@
-import { JetsonImgBox } from "../components/JetsonImgBox";
 import { PageRouterFrame } from "../components/PageRouterFrame";
+import { LoadImage } from "./LoadImage";
 
 export const PageRouter = ({ where }) => {
   /**
-   * data 불러오고 어느 페이지에서 호출했는지로 구분해서 라우팅
    * TODO:: infocomponent 구현 HOME 따로 Hardware 따로
    *
    */
@@ -11,7 +10,8 @@ export const PageRouter = ({ where }) => {
     <PageRouterFrame
       connect_state={true}
       ConnectSuccessComponent={() => {
-        return <JetsonImgBox />;
+        if (where === "Home") return <LoadImage />;
+        if (where === "Hardware") return <div>얌마 도완득</div>;
       }}
     />
   );
