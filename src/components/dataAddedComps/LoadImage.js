@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { JetsonImgBox } from "../components/JetsonImgBox";
+import { JetsonImgContainer } from "../components/JetsonImgContainer";
 
 export const LoadImage = () => {
   /**
@@ -13,7 +13,7 @@ export const LoadImage = () => {
   );
   return (
     <div>
-      <JetsonImgBox
+      <JetsonImgContainer
         before_process={before_process}
         after_process={after_process}
       />
