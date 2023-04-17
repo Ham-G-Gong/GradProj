@@ -1,11 +1,11 @@
 import { Header } from "../../components/components/Header";
-import { MainPage } from "../../components/dataAddedComps/MainPage";
+import { PageRouter } from "../../components/dataAddedComps/PageRouter";
 
 export const Hardware = () => {
   return (
     <div className="home">
       <Header />
-      <MainPage where="Hardware" />
+      <PageRouter where="Hardware" />
     </div>
   );
 };
