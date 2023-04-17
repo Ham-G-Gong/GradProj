@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./Home";
-import { Hardware } from "./Hardware";
+import { Home } from "./home";
+import { Hardware } from "./hardware";
 
 export const App = () => {
   return (
