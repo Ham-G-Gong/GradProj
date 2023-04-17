@@ -1,4 +1,5 @@
 import { PageRouterFrame } from "../components/PageRouterFrame";
+import { LoadHardwareInfo } from "./LoadHardwareInfo";
 import { LoadImage } from "./LoadImage";
 
 export const PageRouter = ({ where }) => {
@@ -11,7 +12,7 @@ export const PageRouter = ({ where }) => {
       connect_state={true}
       ConnectSuccessComponent={() => {
         if (where === "Home") return <LoadImage />;
-        if (where === "Hardware") return <div>얌마 도완득</div>;
+        if (where === "Hardware") return <LoadHardwareInfo />;
       }}
     />
   );
