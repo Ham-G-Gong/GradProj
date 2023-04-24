@@ -1,11 +1,14 @@
+import { ConnectChecker } from "../../components/components/ConnectChecker";
 import { Header } from "../../components/components/Header";
-import { PageRouter } from "../../components/dataAddedComps/PageRouter";
+import { HomeTemplate } from "../../components/templates/HomeTemplate";
 
 export const Home = () => {
   return (
     <div className="home">
       <Header />
-      <PageRouter where="Home" />
+      <ConnectChecker>
+        <HomeTemplate />
+      </ConnectChecker>
     </div>
   );
 };

@@ -1,11 +1,14 @@
+import { ConnectChecker } from "../../components/components/ConnectChecker";
 import { Header } from "../../components/components/Header";
-import { PageRouter } from "../../components/dataAddedComps/PageRouter";
+import { HardwareTemplate } from "../../components/templates/HardwareTemplate";
 
 export const Hardware = () => {
   return (
     <div className="home">
       <Header />
-      <PageRouter where="Hardware" />
+      <ConnectChecker>
+        <HardwareTemplate />
+      </ConnectChecker>
     </div>
   );
 };
