@@ -1,3 +1,3 @@
 export const PercentageText = ({ value }) => {
-  <text> {value} %</text>;
+  <p> {value} %</p>;
 };

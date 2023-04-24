@@ -1,13 +1,11 @@
 import { Header } from "../../components/components/Header";
-import { ConnectChecker } from "../../components/components/ConnectChecker";
-import { HardwareTemplate } from "../../components/templates/HardwareTemplate";
-import { ConnectFailed } from "../../components/components/ConnectFailed";
+import { PageRouter } from "../../components/templates/PageRouter";
 
 export const Hardware = () => {
   return (
     <div className="home">
       <Header />
-      <HardwareTemplate />
+      <PageRouter where="Hardware" />
     </div>
   );
 };

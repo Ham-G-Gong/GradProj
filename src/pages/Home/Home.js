@@ -1,13 +1,11 @@
 import { Header } from "../../components/components/Header";
-import { ConnectChecker } from "../../components/components/ConnectChecker";
-import { HomeTemplate } from "../../components/templates/HomeTemplate";
-import { ConnectFailed } from "../../components/components/ConnectFailed";
+import { PageRouter } from "../../components/templates/PageRouter";
 
 export const Home = () => {
   return (
     <div className="home">
       <Header />
-      <HomeTemplate />
+      <PageRouter where="Home" />
     </div>
   );
 };

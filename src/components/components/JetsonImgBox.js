@@ -1,7 +1,7 @@
 export const JetsonImgBox = ({ explain, alt, src }) => {
   return (
     <div>
-      <a>{explain}</a>
+      <p>{explain}</p>
       <img alt={alt} src={src} />
     </div>
   );

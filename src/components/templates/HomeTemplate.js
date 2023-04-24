@@ -1,11 +1,13 @@
-import { ConnectChecker } from "../components/ConnectChecker";
-import { ConnectFailed } from "../components/ConnectFailed";
+import { HardwareBreifBox } from "../components/HardwareBreifBox";
 import { LoadImage } from "./LoadImage";
+import { ModuleInfoBox } from "./ModuleInfoBox";
 
-export const HomeTemplate = () => {
+export const HomeTemplate = ({ hardware_performance }) => {
   return (
-    <ConnectChecker ErrorComponent={ConnectFailed}>
+    <>
+      <ModuleInfoBox />
       <LoadImage />
-    </ConnectChecker>
+      <HardwareBreifBox hardware_performance={hardware_performance} />
+    </>
   );
 };
