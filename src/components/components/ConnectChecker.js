@@ -1,7 +1,9 @@
-export const ConnectChecker = ({ children, ErrorComponent }) => {
+import { ConnectFailed } from "./ConnectFailed";
+
+export const ConnectChecker = ({ children }) => {
   try {
     return <div>{children}</div>;
   } catch (e) {
-    return <ErrorComponent />;
+    return <ConnectFailed />;
   }
 };

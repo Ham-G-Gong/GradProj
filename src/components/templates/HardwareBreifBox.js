@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { BigProgressBar } from "../components/BigProgressBar";
-import { getHWData } from "../modules/getHWData";
+import { PercentageComponent } from "../components/PercentageComponent";
 import { useInterval } from "../modules/useInterval";
+import { getHWData } from "../modules/getHWData";
 
-export const LoadHardwareInfo = () => {
+export const HardwareBreifBox = () => {
   const [hardware_performance, setHardwarePerformance] = useState({
     // 데이터 받아오는 함수를 바로 넣어줍시다. 인터벌때매 처음 시작이 시간이 걸리네요.
     CPU: 0,
@@ -13,7 +13,10 @@ export const LoadHardwareInfo = () => {
   useInterval(setHardwarePerformance, getHWData);
   return (
     <div>
-      <BigProgressBar title="CPU" percentage={hardware_performance.CPU} />
+      <p>Model Performance</p>
+      <PercentageComponent title="CPU" value={hardware_performance.CPU} />
+      <PercentageComponent title="GPU" value={hardware_performance.GPU} />
+      <p>Inference Time {hardware_performance.InferenceTime}</p>
     </div>
   );
 };

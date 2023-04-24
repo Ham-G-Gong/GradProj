@@ -1,13 +1,13 @@
-import { HardwareBreifBox } from "../components/HardwareBreifBox";
+import { HardwareBreifBox } from "./HardwareBreifBox";
 import { LoadImage } from "./LoadImage";
 import { ModuleInfoBox } from "./ModuleInfoBox";
 
-export const HomeTemplate = ({ hardware_performance }) => {
+export const HomeTemplate = () => {
   return (
     <>
       <ModuleInfoBox />
       <LoadImage />
-      <HardwareBreifBox hardware_performance={hardware_performance} />
+      <HardwareBreifBox />
     </>
   );
 };
