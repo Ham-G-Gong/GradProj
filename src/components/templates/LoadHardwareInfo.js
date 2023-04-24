@@ -13,7 +13,7 @@ export const LoadHardwareInfo = () => {
   useInterval(setHardwarePerformance, getHWData);
   return (
     <div>
-      <BigProgressBar title="CPU" percentage={hardware_performance.CPU} />
+      <BigProgressBar title="CPU" percentage={hardware_performance.cpu} />
     </div>
   );
 };

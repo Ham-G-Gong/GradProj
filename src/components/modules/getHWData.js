@@ -1,3 +1,3 @@
 export const getHWData = (a) => {
-  return { CPU: a, GPU: 10 };
+  return { cpu: a, gpu: 10 };
 };
