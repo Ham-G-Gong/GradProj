@@ -2,7 +2,7 @@ import { JetsonImgBox } from "./JetsonImgBox";
 
 export const JetsonImgContainer = ({ before_process, after_process }) => {
   return (
-    <div>
+    <div style={{ display: "flex" }}>
       <JetsonImgBox
         explain="영상 처리 전"
         alt="before processing"
