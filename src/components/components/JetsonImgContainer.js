@@ -1,8 +1,9 @@
+import { HorizonBox } from "../atoms/HorizonBox";
 import { JetsonImgBox } from "./JetsonImgBox";
 
 export const JetsonImgContainer = ({ before_process, after_process }) => {
   return (
-    <div style={{ display: "flex" }}>
+    <HorizonBox>
       <JetsonImgBox
         explain="영상 처리 전"
         alt="before processing"
@@ -13,6 +14,6 @@ export const JetsonImgContainer = ({ before_process, after_process }) => {
         alt="after processing"
         src={after_process}
       />
-    </div>
+    </HorizonBox>
   );
 };

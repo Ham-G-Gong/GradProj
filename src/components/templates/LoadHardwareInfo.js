@@ -15,77 +15,77 @@ export const LoadHardwareInfo = () => {
   if (!!hardware_performance)
     return (
       <div>
-        <div>
+        <div style={{ margin: "auto" }}>
           <p>Hardware Status</p>
+          <HorizonBox>
+            {hardware_performance.CPU.map((element, index) => {
+              return (
+                <PercentProgressBar
+                  key={index}
+                  title={`CPU ${index}`}
+                  percentage={parseInt(element)}
+                />
+              );
+            })}
+          </HorizonBox>
+          <HorizonBox>
+            <PercentProgressBar
+              title={"GPU"}
+              percentage={parseInt(hardware_performance.GPU)}
+            />
+            <PercentProgressBar
+              title={`Memory Status \n[${hardware_performance.MEM[0]}/${hardware_performance.MEM[1]}] MB`}
+              percentage={(
+                (parseInt(hardware_performance.MEM[0]) /
+                  parseInt(hardware_performance.MEM[1])) *
+                100
+              ).toFixed(0)}
+            />
+            <PercentProgressBar
+              title={`Swap Memory Status \n[${hardware_performance.S_MEM[0]}/${hardware_performance.S_MEM[1]}] MB`}
+              percentage={(
+                (parseInt(hardware_performance.S_MEM[0]) /
+                  parseInt(hardware_performance.S_MEM[1])) *
+                100
+              ).toFixed(0)}
+            />
+            <PercentProgressBar
+              title={`Storage \n[${hardware_performance.DISK[0]}/${hardware_performance.DISK[1]}] Byte`}
+              percentage={parseInt(hardware_performance.DISK[2])}
+            />
+          </HorizonBox>
         </div>
-        <HorizonBox>
-          {hardware_performance.CPU.map((element, index) => {
-            return (
-              <PercentProgressBar
-                key={index}
-                title={`CPU ${index}`}
-                percentage={parseInt(element)}
-              />
-            );
-          })}
-        </HorizonBox>
-        <HorizonBox>
-          <PercentProgressBar
-            title={"GPU"}
-            percentage={parseInt(hardware_performance.GPU)}
-          />
-          <PercentProgressBar
-            title={`Memory Status \n[${hardware_performance.MEM[0]}/${hardware_performance.MEM[1]}] MB`}
-            percentage={(
-              (parseInt(hardware_performance.MEM[0]) /
-                parseInt(hardware_performance.MEM[1])) *
-              100
-            ).toFixed(0)}
-          />
-          <PercentProgressBar
-            title={`Swap Memory Status \n[${hardware_performance.S_MEM[0]}/${hardware_performance.S_MEM[1]}] MB`}
-            percentage={(
-              (parseInt(hardware_performance.S_MEM[0]) /
-                parseInt(hardware_performance.S_MEM[1])) *
-              100
-            ).toFixed(0)}
-          />
-          <PercentProgressBar
-            title={`Storage \n[${hardware_performance.DISK[0]}/${hardware_performance.DISK[1]}] Byte`}
-            percentage={parseInt(hardware_performance.DISK[2])}
-          />
-        </HorizonBox>
-        <div>
+        <div style={{ margin: "auto" }}>
           <p>Hardware Temperature</p>
+          <HorizonBox>
+            <TemperProgressBar
+              title={"CPU temperature"}
+              temperature={parseInt(hardware_performance.CPU_T)}
+            />
+            <TemperProgressBar
+              title={"GPU temperature"}
+              temperature={parseInt(hardware_performance.GPU_T)}
+            />
+            <TemperProgressBar
+              title={"Thermo temperature"}
+              temperature={parseInt(hardware_performance.Therm_T)}
+            />
+          </HorizonBox>
+          <HorizonBox>
+            <TemperProgressBar
+              title={"PLL temperature"}
+              temperature={parseInt(hardware_performance.PLL_T)}
+            />
+            <TemperProgressBar
+              title={"PMIC temperature"}
+              temperature={parseInt(hardware_performance.PMIC_T)}
+            />
+            <TemperProgressBar
+              title={"AO temperature"}
+              temperature={parseInt(hardware_performance.AO_T)}
+            />
+          </HorizonBox>
         </div>
-        <HorizonBox>
-          <TemperProgressBar
-            title={"CPU temperature"}
-            temperature={parseInt(hardware_performance.CPU_T)}
-          />
-          <TemperProgressBar
-            title={"GPU temperature"}
-            temperature={parseInt(hardware_performance.GPU_T)}
-          />
-          <TemperProgressBar
-            title={"Thermo temperature"}
-            temperature={parseInt(hardware_performance.Therm_T)}
-          />
-        </HorizonBox>
-        <HorizonBox>
-          <TemperProgressBar
-            title={"PLL temperature"}
-            temperature={parseInt(hardware_performance.PLL_T)}
-          />
-          <TemperProgressBar
-            title={"PMIC temperature"}
-            temperature={parseInt(hardware_performance.PMIC_T)}
-          />
-          <TemperProgressBar
-            title={"AO temperature"}
-            temperature={parseInt(hardware_performance.AO_T)}
-          />
-        </HorizonBox>
       </div>
     );
   else return <div />;

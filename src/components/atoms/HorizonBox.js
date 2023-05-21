@@ -1,3 +1,3 @@
-export const HorizonBox = ({ children }) => {
-  return <div style={{ display: "flex" }}>{children}</div>;
+export const HorizonBox = ({ children, style }) => {
+  return <div style={{ ...style, display: "flex" }}>{children}</div>;
 };
