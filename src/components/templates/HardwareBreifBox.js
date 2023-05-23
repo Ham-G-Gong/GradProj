@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { PercentageComponent } from "../components/PercentageComponent";
 import { useInterval } from "../modules/useInterval";
 import { getHWData } from "../modules/getHWData";
+import { CustomWhiteText } from "../atoms/CustomWhiteText";
 
 export const HardwareBreifBox = () => {
   const [hardware_performance, setHardwarePerformance] = useState();
@@ -13,7 +14,9 @@ export const HardwareBreifBox = () => {
   if (!!hardware_performance)
     return (
       <div>
-        <p>Hardware Brief Status</p>
+        <CustomWhiteText style={{ fontSize: "20px" }}>
+          Hardware Brief Status
+        </CustomWhiteText>
         {hardware_performance.CPU.map((element, index) => {
           return (
             <PercentageComponent

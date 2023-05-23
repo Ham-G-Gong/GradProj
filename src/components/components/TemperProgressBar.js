@@ -1,11 +1,13 @@
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { CustomWhiteText } from "../atoms/CustomWhiteText";
 export const TemperProgressBar = ({ title, temperature }) => {
   const text = title.split("\n");
   return (
     <div style={{ width: 200, height: 200 }}>
-      <strong>{text[0]}</strong>
-      <p>{text[1]}</p>
+      <CustomWhiteText>{text[0]}</CustomWhiteText>
+      <br />
+      <CustomWhiteText style={{ fontSize: "12px" }}>{text[1]}</CustomWhiteText>
       <CircularProgressbar
         maxValue={60}
         styles={buildStyles(

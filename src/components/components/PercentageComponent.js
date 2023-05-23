@@ -1,9 +1,11 @@
+import { CustomWhiteText } from "../atoms/CustomWhiteText";
+
 export const PercentageComponent = ({ title, value }) => {
   return (
     <div>
-      <p>
+      <CustomWhiteText>
         {title} : {value} %
-      </p>
+      </CustomWhiteText>
     </div>
   );
 };

@@ -5,7 +5,16 @@ import { Error } from "./error";
 
 export const App = () => {
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        backgroundColor: "#333333",
+      }}
+    >
       <Router>
         <Routes>
           <Route path={""} element={<Home />}></Route>

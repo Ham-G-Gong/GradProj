@@ -4,6 +4,7 @@ import { getHWData } from "../modules/getHWData";
 import { useInterval } from "../modules/useInterval";
 import { TemperProgressBar } from "../components/TemperProgressBar";
 import { HorizonBox } from "../atoms/HorizonBox";
+import { CustomWhiteText } from "../atoms/CustomWhiteText";
 
 export const LoadHardwareInfo = () => {
   const [hardware_performance, setHardwarePerformance] = useState();
@@ -16,7 +17,8 @@ export const LoadHardwareInfo = () => {
     return (
       <div>
         <div style={{ margin: "auto" }}>
-          <p>Hardware Status</p>
+          <CustomWhiteText>Hardware Status</CustomWhiteText>
+          <br />
           <HorizonBox>
             {hardware_performance.CPU.map((element, index) => {
               return (
@@ -56,7 +58,8 @@ export const LoadHardwareInfo = () => {
           </HorizonBox>
         </div>
         <div style={{ margin: "auto" }}>
-          <p>Hardware Temperature</p>
+          <br />
+          <CustomWhiteText>Hardware Temperature</CustomWhiteText>
           <HorizonBox>
             <TemperProgressBar
               title={"CPU temperature"}

@@ -4,17 +4,16 @@ export const ModuleList = ({ module_list, now, setNow, setIsClicked }) => {
       {module_list &&
         module_list.map((element, index) => {
           return (
-            element !== now && (
-              <button
-                onClick={() => {
-                  setNow(element);
-                  setIsClicked(false);
-                }}
-                key={index}
-              >
-                {element}
-              </button>
-            )
+            <button
+              onClick={() => {
+                setNow(element);
+                setIsClicked(false);
+              }}
+              key={index}
+            >
+              {element === now && "now module:\n"}
+              {element}
+            </button>
           );
         })}
     </>

@@ -17,7 +17,7 @@ export const getHWData = async (setFunc) => {
         setFunc(response.data);
       });
   } catch (e) {
-    console.log(JSON.parse(e.message).status);
+    console.log(e.message);
     window.location.href = "/error";
   }
 };

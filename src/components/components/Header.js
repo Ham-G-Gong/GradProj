@@ -1,33 +1,21 @@
 import { Link } from "react-router-dom";
 import { HorizonBox } from "../atoms/HorizonBox";
+import { CustomLink } from "../atoms/CustomLink";
 
 export const Header = () => {
   return (
     <header className="header">
-      <HorizonBox style={{ backgroundColor: "gray", textAlign: "center" }}>
-        <h1>환호우</h1>
-        <Link
-          style={{
-            marginTop: "auto",
-            marginBottom: "auto",
-            textDecoration: "none",
-            color: "black",
-          }}
-          to="/"
-        >
-          Home
-        </Link>
-        <Link
-          style={{
-            marginTop: "auto",
-            marginBottom: "auto",
-            textDecoration: "none",
-            color: "black",
-          }}
-          to="/hardware"
-        >
-          Hardware
-        </Link>
+      <HorizonBox
+        style={{
+          backgroundColor: "#222222  ",
+          textAlign: "center",
+        }}
+      >
+        <h1 style={{ marginLeft: "2%", marginRight: "7%", color: "white" }}>
+          환호우
+        </h1>
+        <CustomLink dest="/">Home</CustomLink>
+        <CustomLink dest="/hardware">Hardware</CustomLink>
       </HorizonBox>
     </header>
   );
