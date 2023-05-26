@@ -1,11 +1,28 @@
-import { Link } from "react-router-dom";
+import { CustomLink } from "../atoms/CustomLink";
+import { FlexBox } from "../atoms/FlexBox";
 
 export const Header = () => {
   return (
     <header className="header">
-      <h1>팀 이름</h1>
-      <Link to="/">Home </Link>
-      <Link to="/hardware">Hardware</Link>
+      <FlexBox
+        style={{
+          backgroundColor: "#222222",
+          padding: "0.5%",
+        }}
+      >
+        <h1
+          style={{
+            marginLeft: "3%",
+            marginRight: "6%",
+            color: "white",
+            alignItems: "center",
+          }}
+        >
+          환호우
+        </h1>
+        <CustomLink dest="/">Home</CustomLink>
+        <CustomLink dest="/hardware">Hardware</CustomLink>
+      </FlexBox>
     </header>
   );
 };

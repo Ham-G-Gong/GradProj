@@ -6,9 +6,7 @@ export const Home = () => {
   return (
     <div className="home">
       <Header />
-      <ConnectChecker>
-        <HomeTemplate />
-      </ConnectChecker>
+      <HomeTemplate />
     </div>
   );
 };

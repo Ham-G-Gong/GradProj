@@ -1,3 +1,3 @@
-export const getSWData = () => {
-  return { accuracy: 10, inference_time: 10 };
+export const getSWData = (setFunc) => {
+  setFunc({ accuracy: 10, inference_time: 10 });
 };

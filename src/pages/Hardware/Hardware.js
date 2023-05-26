@@ -4,11 +4,9 @@ import { HardwareTemplate } from "../../components/templates/HardwareTemplate";
 
 export const Hardware = () => {
   return (
-    <div className="home">
+    <div>
       <Header />
-      <ConnectChecker>
-        <HardwareTemplate />
-      </ConnectChecker>
+      <HardwareTemplate />
     </div>
   );
 };

@@ -1,9 +1,13 @@
+import { CustomWhiteText } from "../atoms/CustomWhiteText";
+import { BsDot } from "react-icons/bs";
+
 export const PercentageComponent = ({ title, value }) => {
   return (
     <div>
-      <p>
-        {title} : {value} %
-      </p>
+      <CustomWhiteText>
+        <BsDot />
+        {title} : <strong>{value}</strong> %
+      </CustomWhiteText>
     </div>
   );
 };

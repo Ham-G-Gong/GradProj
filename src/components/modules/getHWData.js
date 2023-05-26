@@ -1,3 +1,23 @@
-export const getHWData = (a) => {
-  return { cpu: a, gpu: 10 };
+import axios from "axios";
+
+export const getHWData = async (setFunc) => {
+  try {
+    await axios
+      .get(`${process.env.REACT_APP_SERVER_IP}/hardware`)
+      .then((response) => {
+        if (response.status !== 200) {
+          throw new Error(
+            JSON.stringify({
+              status: response.status,
+              message: "getHWData error",
+            })
+          );
+        }
+        console.log(response.data);
+        setFunc(response.data);
+      });
+  } catch (e) {
+    console.log(e.message);
+    window.location.href = "/error";
+  }
 };
