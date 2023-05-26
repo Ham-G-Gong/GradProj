@@ -3,8 +3,8 @@ import { PercentProgressBar } from "../components/PercentProgressBar";
 import { getHWData } from "../modules/getHWData";
 import { useInterval } from "../modules/useInterval";
 import { TemperProgressBar } from "../components/TemperProgressBar";
-import { HorizonBox } from "../atoms/HorizonBox";
 import { CustomWhiteText } from "../atoms/CustomWhiteText";
+import { FlexCenterBox } from "../atoms/FlexCenterBox";
 
 export const LoadHardwareInfo = () => {
   const [hardware_performance, setHardwarePerformance] = useState();
@@ -19,7 +19,7 @@ export const LoadHardwareInfo = () => {
         <div style={{ margin: "auto" }}>
           <CustomWhiteText>Hardware Status</CustomWhiteText>
           <br />
-          <HorizonBox>
+          <FlexCenterBox>
             {hardware_performance.CPU.map((element, index) => {
               return (
                 <PercentProgressBar
@@ -29,8 +29,8 @@ export const LoadHardwareInfo = () => {
                 />
               );
             })}
-          </HorizonBox>
-          <HorizonBox>
+          </FlexCenterBox>
+          <FlexCenterBox>
             <PercentProgressBar
               title={"GPU"}
               percentage={parseInt(hardware_performance.GPU)}
@@ -55,12 +55,12 @@ export const LoadHardwareInfo = () => {
               title={`Storage \n[${hardware_performance.DISK[0]}/${hardware_performance.DISK[1]}] Byte`}
               percentage={parseInt(hardware_performance.DISK[2])}
             />
-          </HorizonBox>
+          </FlexCenterBox>
         </div>
         <div style={{ margin: "auto" }}>
           <br />
           <CustomWhiteText>Hardware Temperature</CustomWhiteText>
-          <HorizonBox>
+          <FlexCenterBox>
             <TemperProgressBar
               title={"CPU temperature"}
               temperature={parseInt(hardware_performance.CPU_T)}
@@ -73,8 +73,8 @@ export const LoadHardwareInfo = () => {
               title={"Thermo temperature"}
               temperature={parseInt(hardware_performance.Therm_T)}
             />
-          </HorizonBox>
-          <HorizonBox>
+          </FlexCenterBox>
+          <FlexCenterBox>
             <TemperProgressBar
               title={"PLL temperature"}
               temperature={parseInt(hardware_performance.PLL_T)}
@@ -87,7 +87,7 @@ export const LoadHardwareInfo = () => {
               title={"AO temperature"}
               temperature={parseInt(hardware_performance.AO_T)}
             />
-          </HorizonBox>
+          </FlexCenterBox>
         </div>
       </div>
     );

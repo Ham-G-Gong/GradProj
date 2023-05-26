@@ -4,6 +4,7 @@ import { Hardware } from "./hardware";
 import { Error } from "./error";
 
 export const App = () => {
+  console.log(window.innerHeight + window.pageYOffset);
   return (
     <div
       className="App"
@@ -12,7 +13,6 @@ export const App = () => {
         top: 0,
         left: 0,
         width: "100%",
-        backgroundColor: "#333333",
       }}
     >
       <Router>

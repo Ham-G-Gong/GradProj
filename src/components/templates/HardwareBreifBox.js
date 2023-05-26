@@ -17,15 +17,14 @@ export const HardwareBreifBox = () => {
         <CustomWhiteText style={{ fontSize: "20px" }}>
           Hardware Brief Status
         </CustomWhiteText>
-        {hardware_performance.CPU.map((element, index) => {
-          return (
-            <PercentageComponent
-              key={index}
-              title={`CPU${index}`}
-              value={parseInt(element)}
-            />
-          );
-        })}
+        <PercentageComponent
+          title={"CPU"}
+          value={Math.floor(
+            hardware_performance.CPU.map((element) => parseInt(element)).reduce(
+              (now, sum) => sum + now
+            ) / 4
+          )}
+        />
         <PercentageComponent
           title="GPU"
           value={parseInt(hardware_performance.GPU)}

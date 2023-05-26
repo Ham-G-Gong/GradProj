@@ -1,19 +1,20 @@
-import { HorizonBox } from "../atoms/HorizonBox";
+import { FlexCenterBox } from "../atoms/FlexCenterBox";
 import { JetsonImgBox } from "./JetsonImgBox";
 
 export const JetsonImgContainer = ({ before_process, after_process }) => {
   return (
-    <HorizonBox>
+    <FlexCenterBox>
       <JetsonImgBox
-        explain="영상 처리 전"
+        explain="Before Processing"
         alt="before processing"
         src={before_process}
       />
+      <div style={{ width: "10%" }} />
       <JetsonImgBox
-        explain="영상 처리 후"
+        explain="After Processing"
         alt="after processing"
         src={after_process}
       />
-    </HorizonBox>
+    </FlexCenterBox>
   );
 };

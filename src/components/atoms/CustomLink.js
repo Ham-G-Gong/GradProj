@@ -13,7 +13,6 @@ export const CustomLink = ({ dest, children }) => {
         color: "black",
         borderWidth: "1px",
         borderColor: "black",
-        padding: "10px",
         fontWeight: isActive ? "bolder" : "lighter",
       })}
     >
