@@ -4,7 +4,6 @@ import { Hardware } from "./hardware";
 import { Error } from "./error";
 
 export const App = () => {
-  console.log(window.innerHeight + window.pageYOffset);
   return (
     <div
       className="App"

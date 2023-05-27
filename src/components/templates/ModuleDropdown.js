@@ -14,11 +14,11 @@ export const ModuleDropdown = () => {
   }, []);
   console.log("moduledropdown");
   return (
-    !!moduleList && (
+    <div>
+      <CustomWhiteText style={{ fontSize: "20px" }}>
+        Select Module
+      </CustomWhiteText>
       <div>
-        <CustomWhiteText style={{ fontSize: "20px" }}>
-          Select Module
-        </CustomWhiteText>
         <div
           style={{
             position: "relative",
@@ -43,7 +43,7 @@ export const ModuleDropdown = () => {
                 color: "#DDDDDD",
               }}
             >
-              {selectedModule}
+              {selectedModule ? selectedModule : "Loading..."}
             </p>
             <FaAngleDown
               style={{
@@ -65,6 +65,6 @@ export const ModuleDropdown = () => {
           )}
         </div>
       </div>
-    )
+    </div>
   );
 };

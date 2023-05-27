@@ -1,3 +1,5 @@
+import { LoadingComponents } from "./LoadingComponent";
+
 export const ModuleList = ({ module_list, now, setNow, setIsClicked }) => {
   return (
     <div
@@ -13,32 +15,35 @@ export const ModuleList = ({ module_list, now, setNow, setIsClicked }) => {
         paddingTop: "10px",
       }}
     >
-      {module_list &&
-        module_list.map((element, index) => {
+      <LoadingComponents condition={module_list}>
+        {module_list.map((element, index) => {
           return (
-            <p
-              onClick={() => {
-                setNow(element);
-                setIsClicked(false);
-              }}
-              style={{
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                margin: "0",
-                marginBottom: "10px",
-                marginLeft: "6px",
-                marginRight: "6px",
-                borderBottom: "1px solid darkgray",
-                fontSize: "18px",
-              }}
-              key={index}
-            >
-              {element === now && "Now : "}
-              {element}
-            </p>
+            element && (
+              <p
+                onClick={() => {
+                  setNow(element);
+                  setIsClicked(false);
+                }}
+                style={{
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  margin: "0",
+                  marginBottom: "10px",
+                  marginLeft: "6px",
+                  marginRight: "6px",
+                  borderBottom: "1px solid darkgray",
+                  fontSize: "18px",
+                }}
+                key={index}
+              >
+                {element === now && "Now : "}
+                {element}
+              </p>
+            )
           );
         })}
+      </LoadingComponents>
     </div>
   );
 };

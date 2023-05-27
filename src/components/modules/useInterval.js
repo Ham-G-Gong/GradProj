@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
-export const useInterval = (setFunc, getDataFunc) => {
+export const useInterval = (getDataFunc) => {
   useEffect(() => {
     const timer = setInterval(async () => {
-      await getDataFunc(setFunc);
+      await getDataFunc();
     }, 2500);
     return () => clearInterval(timer);
   }, []);
