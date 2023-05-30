@@ -8,7 +8,7 @@ export const ModulePerformanceBox = ({ result: model_performance }) => {
   if (!!model_performance)
     return (
       <div>
-        <CustomWhiteText style={{ fontSize: "20px" }}>
+        <CustomWhiteText style={{ fontSize: "26px" }}>
           Model Performance
         </CustomWhiteText>
         <LoadingComponents condition={model_performance}>

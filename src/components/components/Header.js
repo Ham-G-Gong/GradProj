@@ -16,9 +16,10 @@ export const Header = () => {
             marginRight: "6%",
             color: "white",
             alignItems: "center",
+            fontSize: "36px",
           }}
         >
-          환호우
+          햄.지.공.
         </h1>
         <CustomLink dest="/">Home</CustomLink>
         <CustomLink dest="/hardware">Hardware</CustomLink>

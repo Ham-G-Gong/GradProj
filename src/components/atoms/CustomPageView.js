@@ -3,8 +3,8 @@ export const CustomPageView = ({ children }) => {
     <div
       style={{
         paddingTop: "2%",
-        paddingLeft: "10%",
-        paddingRight: "10%",
+        paddingLeft: "20%",
+        paddingRight: "20%",
       }}
     >
       {children}
