@@ -3,8 +3,8 @@ UAV 온디바이스 재난영역 검출 소프트웨어 front-end repository.\
 Jetson Nano 보드에서 작동 중인 서버와 axios 통신하여 데이터를 받아옵니다.
 
 ## GUI
-![front-gui-1](https://github.com/rjsdn0124/GradProj/assets/44187187/1d37c0d9-143a-41ff-8d7e-0c097c89e014)
-![front-gui-2](https://github.com/rjsdn0124/GradProj/assets/44187187/7864bb8a-c630-41d4-b1e1-312153c0d4c3)
+![MicrosoftTeams-image](https://github.com/rjsdn0124/GradProj/assets/44187187/3b44d2c6-2da3-4491-bf57-528b4dd329c6)
+![MicrosoftTeams-image (1)](https://github.com/rjsdn0124/GradProj/assets/44187187/7c7913be-9524-46f1-82df-713e62c303e4)
 ## Dependency
  - React v. 18.2.0
  - React-Icons v. 4.8.0
