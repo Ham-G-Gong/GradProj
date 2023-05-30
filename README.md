@@ -4,7 +4,7 @@ Jetson Nano 보드에서 작동 중인 서버와 axios 통신하여 데이터를
 
 ## GUI
 ![MicrosoftTeams-image](https://github.com/rjsdn0124/GradProj/assets/44187187/3b44d2c6-2da3-4491-bf57-528b4dd329c6)
-![MicrosoftTeams-image (1)](https://github.com/rjsdn0124/GradProj/assets/44187187/7c7913be-9524-46f1-82df-713e62c303e4)
+![MicrosoftTeams-image (2)](https://github.com/rjsdn0124/GradProj/assets/44187187/b601f574-20cb-4b02-a7f7-63d59121506b)
 ## Dependency
  - React v. 18.2.0
  - React-Icons v. 4.8.0
