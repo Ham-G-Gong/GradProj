@@ -4,7 +4,14 @@ Jetson Nano 보드에서 작동 중인 서버와 axios 통신하여 데이터를
 
 ## GUI
 ![MicrosoftTeams-image](https://github.com/rjsdn0124/GradProj/assets/44187187/3b44d2c6-2da3-4491-bf57-528b4dd329c6)
+- 촬영된 이미지와 이를 processing한 이미지를 확인할 수 있습니다.
+- 보드 내에 실행가능한 모듈 리스트를 확인할 수 있고 모듈을 변경할 수 있습니다.
+- 간단한 하드웨어 상태 report를 볼 수 있습니다.
+
 ![MicrosoftTeams-image (2)](https://github.com/rjsdn0124/GradProj/assets/44187187/b601f574-20cb-4b02-a7f7-63d59121506b)
+- 현재 하드웨어들(CPU,GPU,Memory 등)의 점유 상태를 확인할 수 있습니다.
+- 하드웨어들의 온도를 확인할 수 있습니다.
+
 ## Dependency
  - React v. 18.2.0
  - React-Icons v. 4.8.0
