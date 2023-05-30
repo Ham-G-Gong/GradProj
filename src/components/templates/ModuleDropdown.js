@@ -4,9 +4,8 @@ import { ModuleList } from "../components/ModuleList";
 import { CustomWhiteText } from "../atoms/CustomWhiteText";
 import { FaAngleDown } from "react-icons/fa";
 
-export const ModuleDropdown = () => {
+export const ModuleDropdown = ({ selectedModule, setSelectedModule }) => {
   const [isClicked, setIsClicked] = useState(false);
-  const [selectedModule, setSelectedModule] = useState();
   const [moduleList, setModuleList] = useState();
   useEffect(() => {
     getModuleListAndNow(setModuleList, setSelectedModule);

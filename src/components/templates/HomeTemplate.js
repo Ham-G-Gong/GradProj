@@ -8,11 +8,10 @@ import { useInterval } from "../modules/useInterval";
 
 export const HomeTemplate = () => {
   const [imageName, setImageName] = useState();
-  const [result, setResult] = useState();
-  useInterval(() => getProcessResult(setImageName, setResult));
+  useInterval(() => getProcessResult(setImageName));
   return (
     <CustomPageView>
-      <ModuleInfoBox result={result} />
+      <ModuleInfoBox />
       <LoadImage img_name={imageName} />
       <HardwareBreifBox />
     </CustomPageView>

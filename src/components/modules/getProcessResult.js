@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const getProcessResult = async (setImg, setResult) => {
+export const getProcessResult = async (setImg) => {
   try {
-    const { result, img_name } = await axios
+    const { img_name } = await axios
       .get(`${process.env.REACT_APP_SERVER_IP}/ai_module/result`)
       .then((response) => {
         if (response.status !== 200) {
@@ -16,10 +16,6 @@ export const getProcessResult = async (setImg, setResult) => {
         return response.data;
       });
     setImg(img_name);
-    setResult({
-      accuracy: result[0],
-      inference_time: result[1],
-    });
   } catch (e) {
     console.log(e.message);
     window.location.href = "/error";
