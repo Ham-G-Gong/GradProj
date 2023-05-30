@@ -16,7 +16,7 @@ export const CustomLink = ({ dest, children }) => {
         fontWeight: isActive ? "bolder" : "lighter",
       })}
     >
-      <CustomWhiteText style={{ fontSize: "25px" }}>{children}</CustomWhiteText>
+      <CustomWhiteText style={{ fontSize: "28px" }}>{children}</CustomWhiteText>
     </NavLink>
   );
 };

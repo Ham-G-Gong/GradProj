@@ -4,17 +4,24 @@ import { CustomWhiteText } from "../atoms/CustomWhiteText";
 export const TemperProgressBar = ({ title, temperature }) => {
   const text = title.split("\n");
   return (
-    <div style={{ width: 200, height: 200 }}>
+    <div>
       <CustomWhiteText>{text[0]}</CustomWhiteText>
-      <br />
-      <CustomWhiteText style={{ fontSize: "12px" }}>{text[1]}</CustomWhiteText>
+      <CustomWhiteText style={{ fontSize: "16px" }}>
+        {text[1] ? text[1] : "\b"}
+      </CustomWhiteText>
       <CircularProgressbar
         maxValue={60}
-        styles={buildStyles(
-          temperature >= 50
+        background={true}
+        backgroundPadding={5}
+        styles={buildStyles({
+          ...(temperature >= 50
             ? { pathColor: "red" }
-            : temperature >= 40 && { pathColor: "orange" }
-        )}
+            : temperature >= 40 && { pathColor: "orange" }),
+          backgroundColor: "#333333",
+          textColor: "white",
+          textSize: "16px",
+          trailColor: "#666666",
+        })}
         value={temperature}
         text={`${temperature}℃`}
       />

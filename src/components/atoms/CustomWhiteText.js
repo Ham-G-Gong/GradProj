@@ -3,7 +3,7 @@ export const CustomWhiteText = ({ style, children }) => {
     <p
       style={{
         color: "#FFF",
-        fontSize: "18px",
+        fontSize: "23px",
         ...style,
       }}
     >

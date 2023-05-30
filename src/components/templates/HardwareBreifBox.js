@@ -14,7 +14,7 @@ export const HardwareBreifBox = () => {
   useInterval(() => getHWData(setHardwarePerformance));
   return (
     <div>
-      <CustomWhiteText style={{ fontSize: "20px" }}>
+      <CustomWhiteText style={{ fontSize: "26px" }}>
         Hardware Brief Status
       </CustomWhiteText>
       <LoadingComponents condition={hardware_performance}>

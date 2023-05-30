@@ -15,7 +15,7 @@ export const ModuleDropdown = () => {
   console.log("moduledropdown");
   return (
     <div>
-      <CustomWhiteText style={{ fontSize: "20px" }}>
+      <CustomWhiteText style={{ fontSize: "26px" }}>
         Select Module
       </CustomWhiteText>
       <div>
@@ -35,7 +35,7 @@ export const ModuleDropdown = () => {
           >
             <p
               style={{
-                fontSize: "20px",
+                fontSize: "23px",
                 whiteSpace: "nowrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
